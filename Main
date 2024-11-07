@@ -63,3 +63,11 @@ def _get_duration_from_tuple(playlist, n):
   title, duration_str = song.split(';')
   total_seconds += _parse_duration(duration_str)
  return total_seconds
+
+def _get_duration_from_dict(playlist, n):
+ 
+ total_seconds = 0
+ for _ in range(n):
+  title = random.choice(list(playlist.keys()))
+  total_seconds += playlist[title] * 60 # Преобразуем минуты в секунды
+ return total_seconds
