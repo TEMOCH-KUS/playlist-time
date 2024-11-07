@@ -47,4 +47,5 @@ playlist_b = {
 'Опять метель': 3.37,
 }
 
-# Решение
+import random
+import datetime
