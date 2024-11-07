@@ -1,0 +1,12 @@
+def get_duration(playlist, n: int) -> str:
+
+ if isinstance(playlist, tuple):
+  total_seconds = _get_duration_from_tuple(playlist, n)
+ elif isinstance(playlist, dict):
+  total_seconds = _get_duration_from_dict(playlist, n)
+ else:
+  raise TypeError("Неверный тип плейлиста.")
+
+ total_minutes, total_seconds = divmod(total_seconds, 60)
+ total_hours, total_minutes = divmod(total_minutes, 60)
+ return f"{int(total_hours):02}:{int(total_minutes):02}:{int(total_seconds):02}"
