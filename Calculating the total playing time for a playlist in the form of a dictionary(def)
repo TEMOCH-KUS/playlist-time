@@ -1,0 +1,7 @@
+def _get_duration_from_dict(playlist, n):
+ """Вычисляет общее время звучания для плейлиста в виде словаря."""
+ total_seconds = 0
+ for _ in range(n):
+  title = random.choice(list(playlist.keys()))
+  total_seconds += playlist[title] * 60 # Преобразуем минуты в секунды
+ return total_seconds
