@@ -54,3 +54,12 @@ def _parse_duration(duration_str):
  
  minutes, seconds = map(float, duration_str.split('.'))
  return minutes * 60 + seconds
+
+def _get_duration_from_tuple(playlist, n):
+ 
+ total_seconds = 0
+ for _ in range(n):
+  song = random.choice(playlist)
+  title, duration_str = song.split(';')
+  total_seconds += _parse_duration(duration_str)
+ return total_seconds
