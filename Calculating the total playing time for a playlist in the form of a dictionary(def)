@@ -1,7 +1,0 @@
-def _get_duration_from_dict(playlist, n):
-
- total_seconds = 0
- for _ in range(n):
-  title = random.choice(list(playlist.keys()))
-  total_seconds += playlist[title] * 60 
- return total_seconds

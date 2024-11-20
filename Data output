@@ -1,2 +1,0 @@
-print(get_duration(playlist_c, 10)) #второй параметр меняем в зависимости от количества запрошенных песен
-print(get_duration(playlist_b, 5))
